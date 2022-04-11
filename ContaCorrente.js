@@ -1,7 +1,18 @@
 
+import {Cliente} from "./Cliente.js" // tem que importar para para que a classe Cliente sege reconhida pela classe ContaCorrente.
+
 export class ContaCorrente{
     agencia;
-    cliente;
+    _cliente;
+
+    set cliente(novoValor)
+    {
+        if(novoValor instanceof Cliente)  //deixa atribuir um valor cliente se ele for da classe Cliente
+        {
+            this._cliente = novoValor;
+        }       
+        
+    }
 
 
      // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields

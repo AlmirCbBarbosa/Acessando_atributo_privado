@@ -1,28 +1,26 @@
 import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
-const cliente1 = new Cliente();
-cliente1.nome = "Ricardo";
-cliente1.cpf = 11122233309;
-
+//iniciando e colocando valores na classe Clientes
 const cliente2 = new Cliente();
 cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
 
-
-const contaCorrenteRicardo = new ContaCorrente();
-contaCorrenteRicardo.agencia = 1001;
-contaCorrenteRicardo.cliente = cliente1;
-contaCorrenteRicardo.depositar(500);
-
+//iniciando e atribuindo valores à clase ContaCorrente
 const conta2 = new ContaCorrente();
-conta2.cliente = cliente2;
+
+//conta2.cliente = 0; //como o valor colocado não é a classe cliente, no console o valor de conta.cliente será "undefined"
+
+conta2.cliente = cliente2; // como o valor colocado é a classe cliente aparecera o valores da classe
+
 conta2.agencia = 102;
 
-let valor = 200;
-contaCorrenteRicardo.tranferir(valor, conta2);
+conta2.depositar(100);// depositando 100 reais na conta2.
 
-console.log("valor: ", valor)
+conta2._saldo = 200;
+
 console.log(conta2);
+
+
 
 
