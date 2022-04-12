@@ -18,6 +18,10 @@ export class ContaCorrente{
      // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
     
+    get saldo() // este acesso faz com que esta variável não possa sofrer atribuição direta no programa, apenas atraves de métodos da classe, mas não impede que tenha acesso de seu valor para printar.
+    {
+        return this._saldo; 
+    }
 
     sacar(valor){
         if(this._saldo >= valor){

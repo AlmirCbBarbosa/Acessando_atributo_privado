@@ -17,9 +17,9 @@ conta2.agencia = 102;
 
 conta2.depositar(100);// depositando 100 reais na conta2.
 
-conta2._saldo = 200;
+conta2.saldo = 1000; // não aceitara a atribuição direta pois é o nome de um "getter";
 
-console.log(conta2);
+console.log(conta2.saldo);
 
 
 
